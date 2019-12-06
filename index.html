@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Code Playground</title>
+		<!-- Ini Link CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+			function refresh(){
+				const textContent = document.getElementById('code-x').value;
+				document.getElementById('hasil').srcdoc = textContent;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="title">
+			<h2 style="color: white">
+				Code Playground
+			</h2>
+			<div class="main">
+				<textarea  id="code-x" onkeyup="refresh()" placeholder="Code Here..."></textarea>
+				<iframe id="hasil"></iframe>
+			</div>
+		</div>
+	</body>
+</html>
